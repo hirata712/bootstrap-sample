@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.logo {/* 呼び鈴マーク*/
+	height: 50px;
+	width:auto;
+	margin:0px;
+	padding: 0px 0px 0px 0px;/* 上右下左*/
+	background: yellow;
+
+}

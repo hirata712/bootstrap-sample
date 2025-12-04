@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Bootstrap cheatsheet -->
+    <!-- https://bootstrap-cheatsheet.themeselection.com/ -->
+    <!-- Bootstrap入門-->
+    <!-- https://zenn.dev/yamap_web/articles/a2d4d213d4eb48-->
+    <link href="headers.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <h1 class="visually-hidden">Headers examples</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-info-subtle ">
+            <div class="container-fluid">
+
+                <a class="navbar-brand fs-2 fw-bold" href="https://hiratacojp.sharepoint.com/sites/hinet0032/SitePages/EventPlanHome.aspx">
+                <img src="./img/ourLogo_tp.png" alt="Logo" width=auto height="48" class="d-inline-block align-bottom">
+                ポータルのポータルサイト
+                </a>
+
+                <!-- <div class="collapse navbar-collapse" id="navbarNav"> -->
+                    <ul class="navbar-nav">
+                        <!--
+                        <li class="nav-item">
+                        <a class="nav-link active" href="https://hiratacojp.sharepoint.com/sites/hinet0001">Home</a>
+                        </li>
+                        -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://teams.microsoft.com/v2/">Teams</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://hiratacojp.account.box.com/login/">box</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://id.jobcan.jp/users/sign_in?app_key=wf">ジョブカン</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://servicedesk.hirata.co.jp/app/itdesk/ui/ssp/pages/home">サービスデスク</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="https://address.nextset.jp/hiratacojp/shared_contact.html">アドレス帳</a>
+                        </li>
+                    </ul>
+                </div> 
+
+            </div>
+        </nav>
+        <div class="d-flex flex-row-reverse px-3">
+            <p>＜最終更新日: <time id="modified_date"></time>＞</p>
+            <div id ="real-time"></div>
+        </div>
+        <div class="p-2 d-flex flex-column mb-3">
+            <h6><a href="https://hiratacojp.sharepoint.com/sites/hinet0001">HiNetのホームページ</a></h6>
+            <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/hinet0031/SitePages/グローバル事業本部.aspx?csf=1&web=1&e=Cc40Fj">グロ事社内公開Web</a></h6>
+            <h6><a href="https://calendar.nextset.jp/hiratacojp/gp/calendar.html">組織カレンダー</a></h6>
+        </div>
+        <hr>
+        <div class="p-2 d-flex flex-column mb-3">
+            <h6><a class="text-danger" href="https://hiratacojp.sharepoint.com/sites/hinet0032/SitePages/EventPlanHome.aspx">当部署のポータルサイト</a></h6>
+            <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/sites/hinet0032/Shared%20Documents/Forms/AllItems.aspx">ドキュメントフォルダ</a></h6>
+            <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/:u:/r/sites/msteams_9e2e8b/SitePages/Home.aspx?csf=1&web=1&e=y3uAaS">犬のサイト</a></h6>
+            <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/msteams_d16c8e/SitePages/Home.aspx?csf=1&web=1&e=aa8hYu">関係会社ポータルサイト</a></h6>
+            <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/:u:/r/sites/NewsLetter/SitePages/%E3%81%82%E3%82%86%E3%81%BF_2025%E5%B9%B411%E6%9C%88%E5%8F%B7.aspx?csf=1&web=1&e=y3jaeC">ニュースレター</a></h6>
+        </div>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script type="text/javascript">
+// HTMLファイルの最終更新日を取得して表示
+const last = new Date(document.lastModified);
+let dateArr = getCurrentDateInfo(last)
+const target = document.getElementById('modified_date');
+const viewDateText = dateArr[0] + "年" + dateArr[1] + "月" + dateArr[2] + "日";
+const viewDateTextFormat = "2024-02-08";
+target.textContent = viewDateText;
+target.setAttribute("datetime", viewDateTextFormat);
+
+function getCurrentDateInfo(date_obj){
+    var year = date_obj.getFullYear();
+    var month = date_obj.getMonth() + 1;
+    var day = date_obj.getDate();
+    var hour = date_obj.getHours();
+    var min  = date_obj.getMinutes();
+    var sec  = date_obj.getSeconds();
+
+    return [year,month,day,hour,min,sec]
+}
+
+function currentTime(){
+    var today = new Date();
+    var ansArr = getCurrentDateInfo(today);
+    var text =  ansArr[0] + '年' +  ansArr[1] + '月' +  ansArr[2] + '日 ' +  ansArr[3] + ":" +  ansArr[4] + ":" +  ansArr[5];
+   document.getElementById("real-time").innerHTML = text;
+}
+setInterval('currentTime()',1000);
+</script>
+
+</body>
+</html>

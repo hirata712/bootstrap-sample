@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Home-Portal</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Bootstrap cheatsheet -->
+    <!-- https://bootstrap-cheatsheet.themeselection.com/ -->
+    <!-- Bootstrap入門-->
+    <!-- https://zenn.dev/yamap_web/articles/a2d4d213d4eb48-->
+    <link href="headers.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+  <h1 class="visually-hidden">Headers examples</h1>
+  <!-- Header部分 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info-subtle ">
+      <div class="container-fluid">
+          <a class="navbar-brand fs-2 fw-bold" href="https://hiratacojp.sharepoint.com/sites/hinet0032/SitePages/EventPlanHome.aspx">
+          <img src="./img/ourLogo_tp.png" alt="Logo" width=auto height="48" class="d-inline-block align-bottom">
+          
+          </a>
+          <div class="fs-3 fw-bold">ポータルのポータルサイト</div>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown btn-group dropstart">
+              <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                App Menu
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="http://company.hirata.co.jp/cws/cws">カンパニー</a></li>
+                <li><a class="dropdown-item" href="https://teams.microsoft.com/v2/">Teams</a></li>
+                <li><a class="dropdown-item" href="https://hiratacojp.account.box.com/login/">box</a></li>
+                <li><a class="dropdown-item" href="https://id.jobcan.jp/users/sign_in?app_key=wf">ジョブカン</a></li>
+                <li><a class="dropdown-item" href="https://servicedesk.hirata.co.jp/app/itdesk/ui/ssp/pages/home">サービスデスク</a></li>
+                <li><a class="dropdown-item" href="https://address.nextset.jp/hiratacojp/shared_contact.html">アドレス帳</a></li>
+                <li><a class="dropdown-item" href="https://ap.ssso.hdems.com/portal/hirata.co.jp/">アプリ一覧</a></li>
+              </ul>
+            </li>
+          </ul>
+
+      </div>
+  </nav>
+  <!-- 主要コンテンツ部分 -->
+  <main>
+      <div class="d-flex flex-row-reverse px-3">
+          <p>＜最終更新日: <time id="modified_date"></time>＞</p>
+          <div id ="real-time"></div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary-subtle">
+          <div class="p-2 d-flex flex-column mb-3">
+            <h6><a href="https://hiratacojp.sharepoint.com/sites/hinet0001">HiNetのホームページ</a></h6>
+            <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/hinet0031/SitePages/グローバル事業本部.aspx?csf=1&web=1&e=Cc40Fj">グロ事社内公開Web</a></h6>
+            <h6><a href="https://calendar.nextset.jp/hiratacojp/gp/calendar.html">組織カレンダー</a></h6>
+          </div>
+        </div>
+        <div class="col bg-secondary-subtle">
+          <div class="p-2 d-flex flex-column mb-3">
+            <h6 class="fw-bold">【お知らせ】</h6>
+            <h6 class="fw-normal">おと〇が（いつもの）ブーメラン炎上中</h6>
+          </div>
+        </div>
+      </div>
+      <!-- ----------------------------------------------------------- -->
+      <hr>
+      <div class="row">
+        <div class="col bg-danger-subtle">      
+          <div class="p-2 d-flex flex-column mb-3"> <!-- 縦方向に並べるのはcolumn-->
+              <h6><a class="text-danger" href="https://hiratacojp.sharepoint.com/sites/hinet0032/SitePages/EventPlanHome.aspx">当部署のポータルサイト</a></h6>
+              <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/sites/hinet0032/Shared%20Documents/Forms/AllItems.aspx">┗  ドキュメントフォルダ</a></h6>
+              <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/:u:/r/sites/msteams_9e2e8b/SitePages/Home.aspx?csf=1&web=1&e=y3uAaS">┗  犬のサイト</a></h6>
+              <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/msteams_d16c8e/SitePages/Home.aspx?csf=1&web=1&e=aa8hYu">関係会社ポータルサイト</a></h6>
+              <h6><a class ="p-3" href="https://hiratacojp.sharepoint.com/:u:/r/sites/NewsLetter/SitePages/%E3%81%82%E3%82%86%E3%81%BF_2025%E5%B9%B411%E6%9C%88%E5%8F%B7.aspx?csf=1&web=1&e=y3jaeC">┗  ニュースレター</a></h6>
+          </div>
+        </div>
+        <div class="col bg-warning-subtle">
+          <div class="p-2 d-flex flex-column mb-3">
+            <h6><a href="https://hiratacojp.sharepoint.com/:x:/r/sites/msteams_a8cad6/Shared%20Documents/業務進捗管理・月例報告/週間MTG資料/本部長への報告資料_全案件の進捗管理.xlsx?d=wc7bde2db68754df595eaa9132510566c&csf=1&web=1&e=3CzaxN">本部長進捗報告用Excel</a></h6>
+            <h6><a href="https://tasks.office.com/hiratacojp.onmicrosoft.com/Home/PlanViews/17Z4hKdkeE2yDUJGCsPlSPoAC593?Type=PlanLink&Channel=Link&CreatedTime=638529707143730000">Planner</a></h6>
+
+          </div>
+        </div>
+        <div class="col bg-success-subtle">
+          <div class="p-2 d-flex flex-column mb-3">
+            <h6><a href="https://monrepstat01.onrender.com/">月次進捗確認サイト</a></h6>
+            <p></p>
+            <h6><a class="text-danger" href="https://hiratacojp.sharepoint.com/:f:/s/msteams_5ebb04/EnBsqvCQ_yBOnFM5mhS5SdIBhreV96nZNEXGW_vG59c7Ww?e=Cg2hkU">月次「峰」フォルダ</a></h6>
+            <h6><a href="https://hiratacojp.sharepoint.com/:f:/r/sites/msteams_440222/Shared%20Documents/General?csf=1&web=1&e=egWEfa">月次「酒井」フォルダ</a></h6>          
+          </div>
+        </div>
+      </div>
+      <!-- ---------------------------------------------------------------- -->
+      <hr>
+      <div class="row">
+        <div class="col bg-danger-subtle">      
+          <div class="p-2 d-flex flex-column mb-3">
+              <h6><a href="mailto:t_sugi@hirata.co.jp;d_minami@hirata.co.jp;y_mori3@hirata.co.jp;h_maeda@hirata.co.jp;d_ino@hirata.co.jp;e_otsuka@hirata.co.jp;c_tokuda@hirata.co.jp;hc.c_ichino@hirata.co.jp;t_kandabashi@hirata.co.jp">部署内全員あてにメール送信</a></h6>
+              <h6><a href="mailto:y_mori3@hirata.co.jp;d_ino@hirata.co.jp">森と井野宛てメール</a></h6>
+              <h6><a href="mailto:d_minami@hirata.co.jp;h_maeda@hirata.co.jp;e_otsuka@hirata.co.jp">南前田大塚宛てメール</a></h6>
+              <h6><a href="mailto:c_tokuda@hirata.co.jp;hc.c_ichino@hirata.co.jp;t_kandabashi@hirata.co.jp">徳田市野神宛てメール</a></h6>
+          </div>
+        </div>
+        <div class="col bg-warning-subtle">
+          <div class="shadow w-50 h-50  pt-1 d-flex flex-column mb-3">
+            <img src="./img/falling_leaf_transparent.gif" class="img-thumbnail" alt="Responsive Image">
+          </div>
+        </div>
+        <div class="col bg-success-subtle">
+          <div class="p-2 d-flex flex-column mb-3">
+              <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/hinet0013/SitePages/%E7%B5%84%E7%B9%94%E5%9B%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC.aspx?csf=1&web=1&e=bAvkwX">平田機工組織図</a></h6>
+              <h6><a href="https://hiratacojp.sharepoint.com/:u:/r/sites/hinet0032/SitePages/%E9%96%A2%E4%BF%82%E4%BC%9A%E7%A4%BE%E5%90%84%E7%A4%BE%E3%81%AE%E7%B5%84%E7%B9%94%E5%9B%B3.aspx?csf=1&web=1&e=bOTa8z">関係会社組織図</a></h6>
+              <h6><a href="https://hiratacojp.sharepoint.com/:x:/r/sites/hinet0012/HiNet/A_01_%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%E8%A1%A8/01_TEL-KUMAMOTO_.xlsx?d=w4a3378b8b5764622886870847d85669d&csf=1&web=1&e=Veze0B&nav=MTVfe0Q2NTIyNThBLUIzQjQtNEU1MC1BRUJBLUJFNDVGRDcyRjUxMX0">電話帳（熊本）</a></h6>
+              <h6><a href="">ブラックリスト</a></h6>
+              <h6><a href="https://www.amazon.co.jp/?ref_=abn_logo">Amazon Business</a></h6>
+              <h6><a href="https://www.irasutoya.com/">いらすとや</a></h6>      
+          </div>
+        </div>
+      </div>
+  </main>
+  <!-- フッター部分 -->
+  <footer class="bg-dark fixed-bottom">
+  <div class="container text-center text-white">
+    	  <p>© 2025 あたしよ、あ・た・し</p>
+  </div>
+  </footer>
+
+<!-- ============================================ -->
+<!--                Script                        -->
+<!-- ============================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  // HTMLファイルの最終更新日を取得して表示
+  const last = new Date(document.lastModified);
+  let dateArr = getCurrentDateInfo(last)
+  const target = document.getElementById('modified_date');
+  const viewDateText = dateArr[0] + "年" + dateArr[1] + "月" + dateArr[2] + "日";
+  const viewDateTextFormat = "2024-02-08";
+  target.textContent = viewDateText;
+  target.setAttribute("datetime", viewDateTextFormat);
+
+  function getCurrentDateInfo(date_obj){
+    var year = date_obj.getFullYear();
+    var month = date_obj.getMonth() + 1;
+    var day = date_obj.getDate();
+    var hour = date_obj.getHours();
+    var min  = date_obj.getMinutes();
+    var sec  = date_obj.getSeconds();
+
+    return [year,month,day,hour,min,sec]
+  }
+
+  function currentTime(){
+    var today = new Date();
+    var ansArr = getCurrentDateInfo(today);
+    var text =  ansArr[0] + '年' +  ansArr[1] + '月' +  ansArr[2] + '日 ' +  ansArr[3] + ":" +  ansArr[4] + ":" +  ansArr[5];
+    document.getElementById("real-time").innerHTML = text;
+  }
+
+  setInterval('currentTime()',1000);
+
+</script>
+</body>
+</html>
